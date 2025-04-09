@@ -15,13 +15,13 @@ const initialState: FormSate = {
   data: null,
   loading: false,
   error: null,
-  };
+};
 
 const formSlice = createSlice({
   name: "form",
   initialState,
   reducers: {
-    fetchFormRequest: (_state, _action: PayloadAction<FetchFormParams>) => {},
+    fetchFormRequest: (_state, _action: PayloadAction<string>) => { },
 
     fetchFormStart: (state) => {
       state.loading = true;
@@ -36,8 +36,19 @@ const formSlice = createSlice({
       state.loading = false;
       state.error = action.payload;
     },
+
+    changeKey: (state, action) => {
+      state.loading = false,
+        state.data = action.payload
+    }
   },
 });
 
-export const { fetchFormRequest, fetchFormSuccess, fetchFormFailure, fetchFormStart } = formSlice.actions;
+export const {
+  fetchFormRequest, 
+  fetchFormSuccess, 
+  fetchFormFailure, 
+  fetchFormStart,
+  changeKey 
+} = formSlice.actions;
 export default formSlice.reducer;

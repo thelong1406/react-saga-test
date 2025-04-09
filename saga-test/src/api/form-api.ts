@@ -8,7 +8,7 @@ export async function fetchForm(params: FetchFormParams): Promise<FormModel> {
     if (value !== undefined) query.append(key, value);
   });
 
-  const response = await fetch(`http://localhost:5291/api/items?${query.toString()}`);
+  const response = await fetch(`http://localhost:5291/api/sample?${query.toString()}`);
   if (!response.ok) {
     throw new Error(`API error: ${response.status} ${response.statusText}`);
   }
