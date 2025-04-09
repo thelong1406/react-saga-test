@@ -6,6 +6,7 @@
     "@reduxjs/toolkit": "^2.6.1",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.1",
+    "@types/redux-saga": "^0.9.31",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-redux": "^9.2.0",
@@ -36,8 +37,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@types/redux-saga": "^0.9.31"
   }
 }

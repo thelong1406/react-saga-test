@@ -12,7 +12,7 @@ export default function App() {
     }
   }
 
-  const handleChangeKey = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(changeKey(e.currentTarget.value))
   }
 
@@ -31,7 +31,7 @@ export default function App() {
           name="textInput"
           placeholder="Enter text here"
           value={data?.key ?? ""}
-          onChange={handleChangeKey}
+          onChange={handleChange}
         />
         <br /><br />
 
